@@ -5,11 +5,16 @@
     android:orientation="vertical">
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="This is Second module."
         android:textSize="20sp"
         android:gravity="center"/>
 
+    <Button
+        android:id="@+id/btn_navigation_to_first_module"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="测试跳转到First Module的页面"/>
 
 </LinearLayout>
