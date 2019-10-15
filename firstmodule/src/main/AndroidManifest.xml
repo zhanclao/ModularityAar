@@ -1,2 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.firstmodule" />
+    package="com.example.firstmodule" >
+
+    <application>
+        <activity android:name=".FirstModuleMainActivity" />
+        <activity android:name=".FirstModuleBPageActivity" />
+    </application>
+</manifest>
