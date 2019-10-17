@@ -1,12 +1,11 @@
 package com.example.modularityaar;
 
-import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
-import com.example.firstmodule.FirstModuleMainActivity;
-import com.example.secondmodule.SecondModuleMainActivity;
+import com.alibaba.android.arouter.launcher.ARouter;
+import com.example.firstmodule.Constance;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
@@ -23,10 +22,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.btn_test_first:
-                startActivity(new Intent(MainActivity.this, FirstModuleMainActivity.class));
+//                startActivity(new Intent(MainActivity.this, FirstModuleMainActivity.class));
+                ARouter.getInstance().build(Constance.ACTIVITY_URL_FIRSTMODULE_MAIN).navigation();
+
                 break;
             case R.id.btn_test_second:
-                startActivity(new Intent(MainActivity.this, SecondModuleMainActivity.class));
+                ARouter.getInstance().build(com.example.secondmodule.Constance.ACTIVITY_URL_SECONDMODULE_MAIN).navigation();
+//                startActivity(new Intent(MainActivity.this, SecondModuleMainActivity.class));
                 break;
         }
     }
